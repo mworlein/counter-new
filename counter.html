@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+            body    {
+                background-color: #9999FF;
+                }
+            h1      {
+                font-family: Arial;
+                font-size: 50px;
+                color: white;
+            }
+            p     {
+                font-weight: bold;
+                font-family: Arial;
+                font-size: 20px;
+                }
+</style>
+<script>
+function countWords(str){
+   var count = 0;
+   words = str.split(" "); 
+    for (i=0 ; i < words.length ; i++){
+       if (words[i] != "")
+          count += 1; 
+    }
+
+   document.formSubmit.results.value = 
+      "The Count has counted " +
+      count +
+      " words in your string!";
+}
+</script>
+</head>
+
+<body>
+<form name="formSubmit">
+<center><h1>*~*Magic Word Counter*~*</h1>
+<img src="http://sitesmedia.s3.amazonaws.com/computingservices/files/2013/09/CountDay.jpg"/><br>
+<p>Enter a string for the Count to count:</p>
+<textarea name=inStr rows=5 cols=90>
+</textarea><br><br>
+<input type=button value="Count Words" onClick="countWords(document.formSubmit.inStr.value)";>
+<br><br>
+<p>The Count's Results:</p>
+<textarea name=results rows=5 cols=90>
+</textarea><br>
+</form>  
+</body>
+</html>
